@@ -1,4 +1,4 @@
-package com.example.tel306;
+package com.example.Lab2_20150632;
 
 import org.junit.Test;
 
