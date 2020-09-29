@@ -152,6 +152,12 @@ public class TareasPendientes extends AppCompatActivity {
                     {
                         LinearLayout lista = findViewById(R.id.lista);
                         lista.removeView(cb);
+                        if (lista.getChildCount()==1)
+                        {
+                            TextView noHay = findViewById(R.id.NoHay);
+                            noHay.setVisibility(View.VISIBLE);
+
+                        }
                     }
                 }
             });
