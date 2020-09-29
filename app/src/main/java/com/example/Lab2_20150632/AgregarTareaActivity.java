@@ -19,9 +19,6 @@ public class AgregarTareaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActionBar ab = getSupportActionBar();
-        ab.setDisplayHomeAsUpEnabled(false);
-
         final Intent intent = getIntent();
         final String carrera = intent.getStringExtra("carrera");
 
