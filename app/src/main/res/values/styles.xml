@@ -11,15 +11,15 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDarkTel</item>
         <item name="colorAccent">@color/colorAccentTel</item>
     </style>
-    <style name="Mecatronica" parent="Theme.MaterialComponents.DayNight">
-        <item name="colorPrimary">@color/colorPrimaryTel</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkTel</item>
-        <item name="colorAccent">@color/colorAccentTel</item>
+    <style name="Electronica" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorPrimary">@color/colorPrimaryDarkEl</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkEl</item>
+        <item name="colorAccent">@color/colorAccentEl</item>
 
     </style>
-    <style name="Electronica" parent="Theme.MaterialComponents.DayNight">
-        <item name="colorPrimary">@color/colorPrimaryTel</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkTel</item>
-        <item name="colorAccent">@color/colorAccentTel</item>
+    <style name="Mecatronica" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorPrimary">@color/colorPrimaryMec</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkMec</item>
+        <item name="colorAccent">@color/colorAccentMec</item>
     </style>
 </resources>
