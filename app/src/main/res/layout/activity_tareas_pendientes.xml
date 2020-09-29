@@ -13,8 +13,9 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="36dp"
+        android:fontFamily="casual"
         android:text="Pucp to do list"
         android:textColor="#988989"
         android:textSize="30sp"
@@ -24,13 +25,16 @@
 
     <TextView
         android:id="@+id/BienvenidoNombre"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="198dp"
+        android:layout_height="0dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="32dp"
+        android:fontFamily="casual"
+        android:textColor="#5C5555"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.973"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -38,29 +42,34 @@
         android:id="@+id/regSesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
         android:text="Registrar Sesión nuevamente"
-        app:layout_constraintEnd_toEndOf="@+id/BienvenidoNombre"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BienvenidoNombre" />
 
     <Button
         android:id="@+id/add2do"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="152dp"
+        android:layout_marginTop="48dp"
         android:text="Agregar To Do"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/regSesion" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_width="305dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="casual"
         android:text="Lista de actividades pendientes"
+        android:textAlignment="center"
         android:textColor="#7C6D6D"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add2do"
@@ -70,28 +79,41 @@
         android:id="@+id/mascota"
         android:layout_width="113dp"
         android:layout_height="102dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
         app:layout_constraintEnd_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.35" />
 
-    <LinearLayout
-        android:id="@+id/lista"
-        android:layout_width="0dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="36dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
+    <ScrollView
+        android:layout_width="407dp"
+        android:layout_height="151dp"
+        android:layout_marginBottom="37dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/NoHay"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No hay tareas pendientes"
-            android:visibility="gone" />
-    </LinearLayout>
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/lista"
+                android:layout_width="412dp"
+                android:layout_height="306dp"
+                android:layout_marginBottom="36dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/NoHay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No hay tareas pendientes"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
