@@ -4,7 +4,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Layout;
@@ -23,32 +22,50 @@ public class TareasPendientes extends AppCompatActivity {
     int cont;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //PRIMERO
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tareas_pendientes);
 
-        ImageView mascota = findViewById(R.id.mascota);
 
         final Intent intent = getIntent();
         final String carrera = intent.getStringExtra("carrera");
+        /*
+        Button button = findViewById(R.id.regSesion);
+        Button button1 = findViewById(R.id.add2do);
+        button.setBackgroundColor(0xFF009688);
+        button1.setBackgroundColor(0xFF009688);
+        */
+        if(carrera.equalsIgnoreCase("Telecomunicaciones"))
+        {
+            setTheme(R.style.Telecom);
+        }
+        else if(carrera.equalsIgnoreCase("Electronica"))
+        {
+            setTheme(R.style.Electronica);
+        }
+        else if(carrera.equalsIgnoreCase("Mecatronica"))
+        {
+            setTheme(R.style.Mecatronica);
+        }
+
+        //SEGUNDO
+        this.setContentView(R.layout.activity_tareas_pendientes);
+
+
+        ImageView mascota = findViewById(R.id.mascota);
 
 
         if(carrera.equalsIgnoreCase("Telecomunicaciones"))
         {
             mascota.setImageResource(R.drawable.telito);
-            this.setTheme(R.style.Telecom);
-
         }
         else if(carrera.equalsIgnoreCase("Electronica"))
         {
             mascota.setImageResource(R.drawable.electro);
-            this.setTheme(R.style.Electronica);
         }
         else
         {
             mascota.setImageResource(R.drawable.benderv3);
-            this.setTheme(R.style.Mecatronica);
         }
-
 
         mascota.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +100,12 @@ public class TareasPendientes extends AppCompatActivity {
             }
         });
 
+    }
+    public void onBackPressed(){
+        Intent a = new Intent(Intent.ACTION_MAIN);
+        a.addCategory(Intent.CATEGORY_HOME);
+        a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(a);
 
     }
 
