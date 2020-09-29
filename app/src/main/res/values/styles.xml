@@ -6,18 +6,18 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="Telecom" parent="Theme.MaterialComponents.Light">
+    <style name="Telecom" parent="Theme.MaterialComponents.DayNight">
         <item name="colorPrimary">@color/colorPrimaryTel</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkTel</item>
         <item name="colorAccent">@color/colorAccentTel</item>
     </style>
-    <style name="Mecatronica" parent="Theme.MaterialComponents.Light">
+    <style name="Mecatronica" parent="Theme.MaterialComponents.DayNight">
         <item name="colorPrimary">@color/colorPrimaryTel</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkTel</item>
         <item name="colorAccent">@color/colorAccentTel</item>
 
     </style>
-    <style name="Electronica" parent="Theme.MaterialComponents.Light">
+    <style name="Electronica" parent="Theme.MaterialComponents.DayNight">
         <item name="colorPrimary">@color/colorPrimaryTel</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkTel</item>
         <item name="colorAccent">@color/colorAccentTel</item>

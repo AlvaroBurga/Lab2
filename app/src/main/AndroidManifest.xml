@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_calendario"
         android:supportsRtl="true"
         android:theme="@style/deufault">
-        <activity android:name="com.example.Lab2_20150632.TareasPendientes"></activity>
-        <activity android:name="com.example.Lab2_20150632.MainActivity">
+        <activity android:name=".AgregarTareaActivity"></activity>
+        <activity android:name=".TareasPendientes"
+            android:parentActivityName=".AgregarTareaActivity"/>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
