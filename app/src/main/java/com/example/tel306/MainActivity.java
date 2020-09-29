@@ -1,8 +1,7 @@
-package com.example.lab2_20150632;
+package com.example.tel306;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
