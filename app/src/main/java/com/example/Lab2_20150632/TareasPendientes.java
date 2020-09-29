@@ -3,19 +3,19 @@ package com.example.Lab2_20150632;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.constraintlayout.widget.ConstraintLayout;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class TareasPendientes extends AppCompatActivity {
 
@@ -88,6 +88,7 @@ public class TareasPendientes extends AppCompatActivity {
         regSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                cont=0;
                 Intent intent1 = new Intent(TareasPendientes.this, MainActivity.class);
                 startActivity(intent1);
             }
@@ -97,6 +98,15 @@ public class TareasPendientes extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent2 = new Intent(TareasPendientes.this, AgregarTareaActivity.class);
                 intent2.putExtra("carrera", carrera);
+
+
+                ArrayList<String> nombres = new ArrayList<>();
+                LinearLayout lista = findViewById(R.id.lista);
+                for (int i=1; i< lista.getChildCount();i++) {
+                    CheckBox cb = (CheckBox) lista.getChildAt(i);
+                    nombres.add(cb.getText().toString());
+                }
+                intent2.putExtra("lista", nombres);
                 int requestcode =1;
                 startActivityForResult(intent2,requestcode);
             }
@@ -154,6 +164,12 @@ public class TareasPendientes extends AppCompatActivity {
                     {
                         LinearLayout lista = findViewById(R.id.lista);
                         lista.removeView(cb);
+                        if (lista.getChildCount()==1)
+                        {
+                            TextView noHay = findViewById(R.id.NoHay);
+                            noHay.setVisibility(View.VISIBLE);
+
+                        }
                     }
                 }
             });
